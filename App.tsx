@@ -46,17 +46,31 @@ const App: React.FC = () => {
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden flex flex-col">
       {/* Header / HUD */}
-      <header className="absolute top-0 left-0 w-full p-4 z-20 flex justify-between items-center pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
-        <div className="flex items-center gap-2 text-green-500 pointer-events-auto">
-          <Terminal className="w-6 h-6 animate-pulse" />
-          <h1 className="text-xl font-bold tracking-widest uppercase">CyberAscii<span className="text-xs ml-1 opacity-70">v1.0</span></h1>
-        </div>
-        <div className="text-green-800 text-xs flex gap-4 font-mono">
-          <span>SYS.STATUS: ONLINE</span>
-          <span>CAM.FEED: ACTIVE</span>
-          <span className="animate-pulse">REC ●</span>
-        </div>
-      </header>
+   {/* Header / HUD */}
+<header className="absolute top-0 left-0 w-full p-4 z-20 flex justify-between items-start pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
+  <div className="flex flex-col gap-1 pointer-events-auto">
+    <div className="flex items-center gap-2 text-green-500">
+      <Terminal className="w-6 h-6 animate-pulse" />
+      <h1 className="text-xl font-bold tracking-widest uppercase">Ascii by Heart</h1>
+    </div>
+    <p className="text-[10px] text-green-700 font-mono ml-8">
+      Designed and build by{" "}
+      <a 
+        href="https://anujtiwari.vercel.app/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="underline hover:text-green-400 transition-colors"
+      >
+        Anuj Tiwari
+      </a>
+    </p>
+  </div>
+  <div className="text-green-800 text-xs flex gap-4 font-mono">
+    <span>SYS.STATUS: ONLINE</span>
+    <span>CAM.FEED: ACTIVE</span>
+    <span className="animate-pulse">REC ●</span>
+  </div>
+</header>
 
       {/* Main Canvas Area */}
       <main className="flex-grow relative z-10">
